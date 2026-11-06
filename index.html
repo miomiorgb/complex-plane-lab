@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="把复变函数论变成可操作的复平面：知识网络、12个交互实验与概念挑战。覆盖解析函数、积分、级数和留数。">
+  <title>复平面实验室 · 数学物理方法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#map"><span class="brandmark">ℂ</span><span>复平面实验室<small>数学物理方法 · 第一篇</small></span></a><nav aria-label="主导航"><button data-view="map" class="active">知识网络</button><button data-view="learn">交互实验</button><button data-view="review">自测与回看</button></nav><span id="progress" class="progress">0 / 12 已探索</span></header>
+<main>
+  <section id="map-view">
+    <div class="intro"><div><p class="eyebrow">一条主线，连起第 1、2、3、5 章</p><h1>让复平面，<em>动起来。</em></h1><p class="lead">从一个能拖动的点出发，看平面怎样变形，沿曲线怎样累积，最后理解：为什么整个积分，只留下一个系数。</p><div class="intro-actions"><button class="primary" id="start">从第一章开始 <span>↗</span></button><button class="text-button" id="continue">继续上次探索 →</button></div></div><div class="route-note"><span class="tiny-label">今晚的起点</span><strong>先把第一章补成一幅图</strong><p>先探索前 6 个实验，再沿网络走向积分、级数与留数。每次约 5–10 分钟，可以分晚完成。</p><span>第四章 Γ、B 函数已跳过</span></div></div>
+    <div class="map-heading"><h2>知识怎样生长</h2><p>点击节点进入实验。实线表示学习依赖，虚线表示跨章联系；横向滑动可查看整张图。</p></div>
+    <div class="network-scroll" tabindex="0" role="region" aria-label="可横向滚动的知识网络"><svg id="network" viewBox="0 0 1180 550" aria-label="从复数到留数的可点击知识网络"></svg></div>
+    <div class="map-footer"><span>起点：复数既是点，也是一次旋转缩放。</span><span>终点：留数把局部行为，变成整体积分。</span></div>
+    <section class="study-path"><h2>你可以从这里走</h2><div id="chapter-paths"></div></section>
+  </section>
+  <section id="learn-view" hidden>
+    <div class="lesson-top"><button class="text-button back-map">← 回到知识网络</button><span id="lesson-count"></span></div>
+    <div class="lesson-layout"><aside class="lesson-sidebar"><p class="tiny-label">探索路线</p><div id="lesson-nav"></div><p class="sidebar-note">先预测，再动手，最后看解释。<br>圆点可以拖动，滑块支持键盘。</p></aside><article class="lesson-main">
+      <div class="lesson-title"><p class="eyebrow" id="chapter-label"></p><h1 id="lesson-title"></h1><p id="lesson-question" class="lead"></p></div>
+      <div class="experiment"><div class="experiment-bar"><span id="experiment-label">交互实验</span><button id="reset" class="text-button">重置实验 ↺</button></div><div id="controls" class="controls"></div><div id="stage" class="stage"></div><div class="readout" id="readout" aria-live="polite"></div></div>
+      <div id="task" class="task"></div>
+      <div id="explanation" class="explanation"></div>
+      <details class="derivation"><summary>把图像接回公式与条件 <span>＋</span></summary><div id="details"></div></details>
+      <section class="concept-check"><p class="tiny-label">停一下，检验你的直觉</p><h3 id="quiz-question"></h3><div id="quiz-options"></div><p id="quiz-feedback" role="status"></p></section>
+      <section class="connections"><p class="tiny-label">这个想法还连着什么？</p><div id="connections"></div></section>
+      <div class="lesson-bottom"><button id="previous" class="text-button">← 上一个</button><button id="complete" class="primary">我理解了，继续 →</button></div>
+    </article></div>
+  </section>
+  <section id="review-view" hidden><div class="intro"><div><p class="eyebrow">把零散的直觉重新连起来</p><h1>看见联系，才算理解。</h1><p class="lead">这里记录本设备的探索进度。答错没有扣分，回到对应实验再看一次就好。</p></div></div><div id="review-body"></div></section>
+  <footer><span>独立编写的交互学习说明 · 覆盖教材第 1、2、3、5 章</span><button class="text-button" id="sources-toggle">内容依据与使用说明</button><div id="sources" hidden><p>教材：姚端正、周国全、贾俊基《数学物理方法》第四版，科学出版社。范围依据<a href="https://www.ecsponline.com/goods.php?id=205796" target="_blank" rel="noreferrer">出版社目录</a>。第一章与现有两份老师课件的主题核对；后续内容按教材主题独立编写，不是课件转录。Γ、B 函数按你的要求跳过。</p><p>知识联系经 Graphify 辅助提取后人工编排。图中的实验采样用来建立直觉，有限路径或有限项的数值结果不代替证明。进度仅存当前浏览器，不跨设备同步；学习交互在本机运行，无需登录账号。</p></div></footer>
+</main>
+<script src="content.js"></script><script src="app.js"></script>
+</body></html>
