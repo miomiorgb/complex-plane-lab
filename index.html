@@ -2,35 +2,55 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="把复变函数论变成可操作的复平面：知识网络、12个交互实验与概念挑战。覆盖解析函数、积分、级数和留数。">
+  <meta name="description" content="没听过前面的课，也能从这里开始。用问题引入、完整例题、交互实验、公式推导和迁移练习，学懂复变函数论。">
   <title>复平面实验室 · 数学物理方法</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="#map"><span class="brandmark">ℂ</span><span>复平面实验室<small>数学物理方法 · 第一篇</small></span></a><nav aria-label="主导航"><button data-view="map" class="active">知识网络</button><button data-view="learn">交互实验</button><button data-view="review">自测与回看</button></nav><span id="progress" class="progress">0 / 12 已探索</span></header>
+<header class="topbar"><a class="brand" href="#home"><span class="brandmark">ℂ</span><span>复平面实验室<small>数学物理方法 · 第一篇</small></span></a><nav aria-label="主导航"><button data-view="home" class="active">从零开始</button><button data-view="map">知识网络</button><button data-view="learn">学习课堂</button><button data-view="proof">公式推导</button><button data-view="review">复习与诊断</button></nav><span id="progress" class="progress">0 / 12 已学通</span></header>
 <main>
-  <section id="map-view">
-    <div class="intro"><div><p class="eyebrow">一条主线，连起第 1、2、3、5 章</p><h1>让复平面，<em>动起来。</em></h1><p class="lead">从一个能拖动的点出发，看平面怎样变形，沿曲线怎样累积，最后理解：为什么整个积分，只留下一个系数。</p><div class="intro-actions"><button class="primary" id="start">从第一章开始 <span>↗</span></button><button class="text-button" id="continue">继续上次探索 →</button></div></div><div class="route-note"><span class="tiny-label">今晚的起点</span><strong>先把第一章补成一幅图</strong><p>先探索前 6 个实验，再沿网络走向积分、级数与留数。每次约 5–10 分钟，可以分晚完成。</p><span>第四章 Γ、B 函数已跳过</span></div></div>
-    <div class="map-heading"><h2>知识怎样生长</h2><p>点击节点进入实验。实线表示学习依赖，虚线表示跨章联系；横向滑动可查看整张图。</p></div>
+  <section id="home-view">
+    <div class="intro beginner-intro"><div><p class="eyebrow">没有听过前面的课？从这里接上。</p><h1>先有一个问题，<br>再走进<em>复平面。</em></h1><p class="lead">这门课为什么把数画成平面，又为什么最后能用一个系数算积分？不需要先读懂整张知识网络。我们从熟悉的数轴出发，每一课都带你走完一个小闭环。</p><div class="intro-actions"><button class="primary" id="start">开始第 1 课 →</button><button class="text-button" id="continue">接着上次学习 →</button></div><p class="home-note" id="resume-note"></p></div><div class="opening-lab"><span class="tiny-label">先动一下，看看为什么需要 i</span><h2>乘一个数，也可以是转一个方向。</h2><svg viewBox="0 0 360 250" role="img" aria-label="从实数轴走到复平面，用旋转解释乘以 i"><path d="M35 145H325M180 25V230" stroke="#b6c8ba" fill="none"/><circle cx="180" cy="145" r="90" fill="none" stroke="#d9dfd5" stroke-dasharray="4 5"/><text x="320" y="166">实轴</text><text x="190" y="30">虚轴</text><text x="270" y="166">1</text><text x="70" y="166">−1</text><text x="191" y="58">i</text><text x="191" y="234">−i</text><g id="opening-arrow"><path d="M180 145H270M260 138L270 145L260 152" stroke="#126c64" stroke-width="4" fill="none"/><circle cx="270" cy="145" r="6" fill="#126c64"/></g></svg><div class="opening-actions"><button class="action-button" id="rotate-intro">再乘一次 i ↶</button><button class="text-button" id="reset-intro">回到 1</button></div><p id="opening-caption" aria-live="polite">从 1 出发。每乘一次 i，逆时针转 90°。</p><p class="small-note">转两次得到 −1：所以 i² = −1。复数给“方向”也安排了位置。这是后面振动、波动与积分计算的一种语言。</p></div></div>
+    <section class="home-section"><p class="eyebrow">先看看这门课要解决什么</p><h2>把十二课，看成同一个问题的四次推进。</h2><div class="big-route"><div><span>01 · 先认识对象</span><h3>一个数，怎样带上方向？</h3><p>点 → 旋转 → 平面映射 → 解析与分支</p><small>得到工具：看懂函数在复平面里做什么。</small></div><div><span>02 · 再沿路累积</span><h3>走一圈，为什么可能归零？</h3><p>路径积分 → 柯西定理 → 柯西公式</p><small>得到工具：用边界的信息求内部的值。</small></div><div><span>03 · 拆开局部结构</span><h3>一个函数，能拆成哪些幂？</h3><p>泰勒 → 收敛范围 → 洛朗 → 奇点</p><small>得到工具：看清正常点与异常点附近的行为。</small></div><div><span>05 · 回答整体问题</span><h3>为什么只留下负一次项？</h3><p>留数 → 留数定理 → 实积分</p><small>得到工具：把一整条围道的积分化成局部系数。</small></div></div><p class="small-note">按教材第 1、2、3、5 章组织；Γ、B 函数不在本次学习范围内。刚补课时先完成前六课，不必一次走完整篇。</p></section>
+    <section class="home-section" id="readiness"><p class="eyebrow">不确定基础是否够？先补这五块。</p><h2>看到陌生符号，可以在这里停一下。</h2><p>每张卡片先用一句话解释，再给一个小问题。它们是随时可回来的工具箱；第一课只需要前两张。</p><div id="readiness-cards" class="readiness-grid"></div></section>
+    <section class="home-section"><p class="eyebrow">每课怎样学</p><h2>先有人带着算，再轮到你自己判断。</h2><ol class="loop-preview"><li>问题与准备<span>知道为何学、会用到什么</span></li><li>跟着算一遍<span>看完整例子里的每一步</span></li><li>预测与实验<span>先想，再拖动、比较、验证</span></li><li>解释与推导<span>把图像接到公式和条件</span></li><li>换个情境<span>不用原参数，也能独立判断</span></li><li>回顾与接力<span>串起本课，带着问题进入下一课</span></li></ol><p class="small-note">实验任务、概念自测与迁移练习通过后才记为“已学通”。读到哪里和错在哪里都会保存在当前浏览器，可以随时跳回任何一步。</p><div id="learning-route" class="learning-route"></div></section>
+  </section>
+  <section id="map-view" hidden>
+    <div class="intro"><div><p class="eyebrow">一条主线，连起第 1、2、3、5 章</p><h1>让复平面，<em>动起来。</em></h1><p class="lead">从一个能拖动的点出发，看平面怎样变形，沿曲线怎样累积，最后理解：为什么整个积分，只留下一个系数。</p><div class="intro-actions"><button class="primary" data-lesson="0">从第一课开始 →</button><button class="text-button" data-view="home">补基础与学习说明 →</button></div></div><div class="route-note"><span class="tiny-label">地图的读法</span><strong>每个节点都通向完整的一课</strong><p>不知道先学什么，就从第一课顺着走。实线表示依赖，虚线提醒你回头连接前面的知识。</p><span>第四章 Γ、B 函数已跳过</span></div></div>
+    <div class="map-heading"><h2>知识怎样生长</h2><p>点击节点进入课堂。横向滑动可查看整张图。</p></div>
     <div class="network-scroll" tabindex="0" role="region" aria-label="可横向滚动的知识网络"><svg id="network" viewBox="0 0 1180 550" aria-label="从复数到留数的可点击知识网络"></svg></div>
     <div class="map-footer"><span>起点：复数既是点，也是一次旋转缩放。</span><span>终点：留数把局部行为，变成整体积分。</span></div>
-    <section class="study-path"><h2>你可以从这里走</h2><div id="chapter-paths"></div></section>
+    <section class="study-path"><h2>按章节进入</h2><div id="chapter-paths"></div></section>
   </section>
   <section id="learn-view" hidden>
-    <div class="lesson-top"><button class="text-button back-map">← 回到知识网络</button><span id="lesson-count"></span></div>
-    <div class="lesson-layout"><aside class="lesson-sidebar"><p class="tiny-label">探索路线</p><div id="lesson-nav"></div><p class="sidebar-note">先预测，再动手，最后看解释。<br>圆点可以拖动，滑块支持键盘。</p></aside><article class="lesson-main">
-      <div class="lesson-title"><p class="eyebrow" id="chapter-label"></p><h1 id="lesson-title"></h1><p id="lesson-question" class="lead"></p></div>
-      <div class="experiment"><div class="experiment-bar"><span id="experiment-label">交互实验</span><button id="reset" class="text-button">重置实验 ↺</button></div><div id="controls" class="controls"></div><div id="stage" class="stage"></div><div class="readout" id="readout" aria-live="polite"></div></div>
-      <div id="task" class="task"></div>
-      <div id="explanation" class="explanation"></div>
-      <details class="derivation"><summary>把图像接回公式与条件 <span>＋</span></summary><div id="details"></div></details>
-      <section class="concept-check"><p class="tiny-label">停一下，检验你的直觉</p><h3 id="quiz-question"></h3><div id="quiz-options"></div><p id="quiz-feedback" role="status"></p></section>
-      <section class="connections"><p class="tiny-label">这个想法还连着什么？</p><div id="connections"></div></section>
-      <div class="lesson-bottom"><button id="previous" class="text-button">← 上一个</button><button id="complete" class="primary">我理解了，继续 →</button></div>
+    <div class="lesson-top"><button class="text-button back-map">← 回到知识网络</button><button class="text-button" data-view="home">基础工具箱 ↗</button><span id="lesson-count"></span></div>
+    <div class="lesson-layout"><aside class="lesson-sidebar"><p class="tiny-label">十二课学习路线</p><div id="lesson-nav"></div><p class="sidebar-note">按顺序学，也可以自由回看。<br>当前步骤会自动保存。</p></aside><article class="lesson-main">
+      <div class="lesson-title"><p class="eyebrow" id="chapter-label"></p><h1 id="lesson-title" tabindex="-1"></h1><p id="lesson-question" class="lead"></p></div>
+      <nav id="lesson-flow" class="lesson-flow" aria-label="本课六个学习环节"></nav>
+      <p id="flow-status" class="flow-status" aria-live="polite"></p>
+      <section id="lesson-section-0" class="learning-section"><div id="lesson-entry"></div></section>
+      <section id="lesson-section-1" class="learning-section" hidden><p class="eyebrow">跟着算一遍</p><h2>先看一个完整例子。</h2><p class="small-note">沿着三步的因果读，不用先记住最后的公式。</p><div id="worked-example"></div></section>
+      <section id="lesson-section-2" class="learning-section" hidden><div id="prediction" class="learning-check"></div>
+        <div class="experiment"><div class="experiment-bar"><span id="experiment-label">交互实验</span><button id="reset" class="text-button">重置实验 ↺</button></div><div id="controls" class="controls"></div><div id="stage" class="stage"></div><div class="readout" id="readout" aria-live="polite"></div></div>
+        <div id="task" class="task"></div>
+      </section>
+      <section id="lesson-section-3" class="learning-section" hidden><p class="eyebrow">把现象接到理由</p><div id="explanation" class="explanation"></div>
+        <section class="lesson-proof"><h2>核心公式，从哪里来？</h2><p>打开推导，按“条件 → 每一步的理由 → 结论”阅读；再用末尾的按钮返回本课。</p><div id="lesson-proof-links"></div></section>
+        <details class="derivation"><summary>公式速查与补充条件 <span>＋</span></summary><div id="details"></div></details>
+      </section>
+      <section id="lesson-section-4" class="learning-section" hidden><p class="eyebrow">现在，自己试一次</p><p>先辨清本课的核心概念，再把方法用到一个新情境。答错可以重试，反馈会告诉你该回看哪里。</p>
+        <section class="concept-check"><p class="tiny-label">① 概念自测</p><h3 id="quiz-question"></h3><div id="quiz-options"></div><p id="quiz-feedback" role="status"></p><button class="text-button" data-step="3">回看解释与公式推导 ↗</button></section>
+        <div id="transfer" class="learning-check"></div>
+      </section>
+      <section id="lesson-section-5" class="learning-section" hidden><div id="lesson-recap"></div><section class="connections"><p class="tiny-label">这个想法还连着什么？</p><div id="connections"></div></section></section>
+      <div id="loop-feedback" role="status" class="loop-feedback"></div>
+      <div class="lesson-bottom"><button id="stage-back" class="text-button">← 上一环节</button><button id="stage-next" class="primary">继续 →</button><button id="complete" class="primary" hidden>完成本课 →</button></div>
+      <div class="lesson-neighbors"><button id="previous" class="text-button">← 上一课</button><button class="text-button" data-view="review">查看我的薄弱环节 →</button></div>
     </article></div>
   </section>
-  <section id="review-view" hidden><div class="intro"><div><p class="eyebrow">把零散的直觉重新连起来</p><h1>看见联系，才算理解。</h1><p class="lead">这里记录本设备的探索进度。答错没有扣分，回到对应实验再看一次就好。</p></div></div><div id="review-body"></div></section>
-  <footer><span>独立编写的交互学习说明 · 覆盖教材第 1、2、3、5 章</span><button class="text-button" id="sources-toggle">内容依据与使用说明</button><div id="sources" hidden><p>教材：姚端正、周国全、贾俊基《数学物理方法》第四版，科学出版社。范围依据<a href="https://www.ecsponline.com/goods.php?id=205796" target="_blank" rel="noreferrer">出版社目录</a>。第一章与现有两份老师课件的主题核对；后续内容按教材主题独立编写，不是课件转录。Γ、B 函数按你的要求跳过。</p><p>知识联系经 Graphify 辅助提取后人工编排。图中的实验采样用来建立直觉，有限路径或有限项的数值结果不代替证明。进度仅存当前浏览器，不跨设备同步；学习交互在本机运行，无需登录账号。</p></div></footer>
+  <section id="proof-view" hidden><div class="lesson-top"><button data-view="map" class="text-button">← 回到知识网络</button><span>17 条推导 · 条件 → 理由 → 结论</span></div><div class="proof-layout"><aside id="proof-nav" aria-label="公式推导目录"></aside><article id="proof-article"></article></div></section>
+  <section id="review-view" hidden><div class="intro"><div><p class="eyebrow">知道哪里卡住，才知道怎样继续。</p><h1>回到缺少的那一环。</h1><p class="lead">这里区分“读过”和“练习通过”。检查会指出需要补做的具体环节；重做后，记录会随之更新。</p></div></div><div id="review-body"></div></section>
+  <footer><span>独立编写的交互学习说明 · 覆盖教材第 1、2、3、5 章</span><button class="text-button" id="sources-toggle">内容依据与使用说明</button><div id="sources" hidden><p>教材：姚端正、周国全、贾俊基《数学物理方法》第四版，科学出版社。范围依据<a href="https://www.ecsponline.com/goods.php?id=205796" target="_blank" rel="noreferrer">出版社目录</a>。第一章与现有两份老师课件的主题核对；后续内容按教材主题独立编写，不是课件转录。Γ、B 函数按要求跳过。</p><p>知识联系经 Graphify 辅助提取后人工编排。实验采样用来建立直觉，有限路径或有限项的数值结果不代替证明。“已学通”表示本站练习通过，建议另用课后题检验掌握情况。进度仅存当前浏览器，不跨设备同步；学习交互在本机运行，无需登录账号。</p></div></footer>
 </main>
-<script src="content.js"></script><script src="app.js"></script>
+<script src="content.js"></script><script src="journey.js"></script><script src="app.js"></script><script src="proofs.js"></script>
 </body></html>
